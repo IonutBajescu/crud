@@ -47,7 +47,6 @@ class Manager
     public function __call($k, $args)
     {
         $table = new Crud();
-        $table->boot();
 
         return call_user_func_array([$table, $k], $args);
     }

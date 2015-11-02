@@ -146,6 +146,7 @@ class Router extends ArrayProxy
 
     public function iframe($url = null)
     {
+        $this->crud->boot();
         $this->defaultAction($this['iframe']);
 
         return $this->render();
